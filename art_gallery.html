@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Lost River Myths</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+  <header class="site-header">
+      <div class="logo">
+      <img src="./icons/temp_logo.png" alt="The Lost River Myths logo">
+      <span>The Lost River Myths</span>
+      </div>
+      <nav>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="library.html" class="active">Library</a></li>
+          <li><a href="echoes.html">Echoes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+  </header>
+
+  <section class="hero">
+      <img src="./art/header1.JPG" alt="Background Image">
+      <h1>
+          <span class="line1">The Lost</span><br>
+          <span class="line2">River Myths</span>
+      </h1>
+  </section>
+
+  <!-- Gallery Intro -->
+  <section class="main-content art-gallery">
+    <div class="section-intro">
+      <img src="icons/gallery.png" alt="Art Icon" class="download-icon" />
+      <div class="intro-text">
+        <h2>Art Gallery</h2>
+        <p>Cupcake ipsum dolor sit amet cake I love sweet roll. Cotton candy pie dragée pie jelly-o. candy.</p>
+      </div>
+    </div>
+
+    <!-- Art Grid -->
+    <div class="gallery-grid-colored">
+      <div class="gallery-item" onclick="openModal('icons/placeholder.png')">
+        <img src="icons/placeholder.png" alt="Artwork 1">
+        <h4>Work Title</h4>
+        <p>artist name</p>
+      </div>
+
+      <div class="gallery-item" onclick="openModal('icons/placeholder.png')">
+        <img src="icons/placeholder.png" alt="Artwork 2">
+        <h4>Work Title</h4>
+        <p>artist name</p>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openModal('icons/placeholder.png')">
+        <img src="icons/placeholder.png" alt="Artwork 3">
+        <h4>Work Title</h4>
+        <p>artist name</p>
+      </div>
+
+      <div class="gallery-item" onclick="openModal('icons/placeholder.png')">
+        <img src="icons/placeholder.png" alt="Artwork 4">
+        <h4>Work Title</h4>
+        <p>artist name</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back Button -->
+  <section class="light-bg back-section">
+    <div class="back-action">
+      <a href="library.html" class="btn">Back</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2025 The Lost River Myths
+  </footer>
+
+  <!-- Modal -->
+  <div id="artModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById("artModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "flex";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("artModal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
